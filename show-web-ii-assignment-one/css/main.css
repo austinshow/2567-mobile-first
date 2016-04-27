@@ -18,6 +18,12 @@ img {
 	max-width: 100%;
 }
 
+#rocky {
+	background-image:url(../img/rocky.jpg) center ;
+	
+	
+}
+
 .row {
 }
 
