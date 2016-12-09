@@ -32,10 +32,6 @@ html {
 	box-sizing: border-box;
 }
 
-a:hover {
-	color: white;
-}
-
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
@@ -69,7 +65,6 @@ li {
 .red {
 	background-color: red;
 }
-
 
 .wrapper {
 	margin: 0 auto;
@@ -170,6 +165,12 @@ li {
 	height: 160px;
 }
 
+.box-three p {
+	width: 50%;
+	margin-left: 160px;
+	margin-top: -20px;
+}
+
 .box-three h3 {
 	font-variant: small-caps;
 }
@@ -190,13 +191,17 @@ li {
 
 #box-nav  {
 	height: 50px;
-	margin-left: 100px;
+	margin-left: 150px;
 	margin-top: 35px;
 }
 
 nav a {
 	font-size: 25px;
 	padding-right: 15px;
+}
+
+#grey-two p:first-child {
+	margin-top: -20px;
 }
 
 .grey .col-1-3 {
@@ -214,13 +219,39 @@ nav a {
 	font-size: 110px;
 	text-transform:uppercase;
 	font-weight:700;
+	margin-bottom: -10px;
 }
 
-#box-one {
-
+#box-one .col-10-12 p:last-child {
+	width: 70%;
+	font-size: 27px;
+	text-align: left;
+	margin-left: 100px;
 }
 
+footer .col-1-4 {
+	margin-left: 700px;
+	margin-top: 30px;
+}
 
+footer h3 {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: -12px;
+}
+
+footer h3, footer a {
+	font-size: 25px;
+}
+
+footer a {
+	padding-right: 20px;
+}
+
+footer .col-4-10 {
+	margin-top: 10px;
+	margin-left: 30px;
+}
 
 /*--------------------------------------------------------------
 3.0 - Media
@@ -248,17 +279,21 @@ img {
 
 #black-one {
 	background-color: #231F20;
-	padding-bottom: 200px;
+}
+
+#grey-two {
+	background-color: #7C7A7A;
+	padding-bottom: 100px;
 }
 
 /*------------4.2 - Text Colors----------------*/
 
-h1, h2, h4, #box-one h2, .box-three h3, a, #grey-three, #box-one .col-10-12 p:first-child {
+h1, h2, h4, #box-one h2, .box-three h3, a, #grey-three, #box-one .col-10-12 p:first-child, footer h3, footer p {
 	color: #D6DE23;
 }
 
-.box-three p, #black-one p, .col-1-2 p:first-child {
-	color: white;
+.box-three p, #black-one p, .col-1-2 p:first-child, #box-one .col-10-12 p:last-child, a:hover, .grey:nth-child(4) p, #grey-two p {
+	color: white
 }
 
 .col-1-2 p {
@@ -279,18 +314,17 @@ h4 {
 	font-size: 46px;
 }
 
-h2 {
-	font-size: 133px;
-}
-
 h1 {
 	font-size: 50px;
 }
 
+h2 {
+	font-size: 133px;
+}
 
 /*------------4.4 - Alignments----------------*/
 
-.col-1-2 p:first-child, #black-one p  {
+.col-1-2 p:first-child, #black-one p, #grey-two p {
 	text-align: left;
 }
 
@@ -302,6 +336,11 @@ h1 {
 	padding-top: 100px;
 	font-size: 133px;
 	font-variant: small-caps;
+}
+
+.grey:nth-child(4) {
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 a {
@@ -339,11 +378,16 @@ h1 {
 	margin-left: 0px;
 }
 
+.grey .col-1-4  {
+	width: 100%;
+}
+
 h1 {
 	font-variant: small-caps;
 	font-size: 40px;
+	padding-left: 0px;
 	text-align: center;
-	padding-left: 30px;
+	margin-bottom: -40px;
 }
 
 ul {
@@ -354,6 +398,21 @@ ul {
 h2 {
 	font-size: 47px;
 	text-align: left;
+}
+
+#box-nav  {
+	margin-left: 0px;
+	margin-top: 35px;
+}
+
+nav a {
+	font-size: 25px;
+	padding-right: 15px;
+}
+
+.grey .col-1-3 {
+	margin-left: 0px;
+	margin-top: 0px;
 }
 
 .box-three h3, .box-three p {
@@ -374,6 +433,45 @@ h2 {
 
 #grey-three {
 	color: #D6DE23;
+}
+
+#box-one .col-10-12 {
+	margin-left: 0px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#box-one .col-10-12 p:first-child {
+	font-size: 35px;
+	font-weight:800;
+}
+
+#box-one .col-10-12 p:last-child {
+	width: 100%;
+	font-size: 16px;
+	margin-left: 0px;
+}
+
+.box-three p {
+	width: 100%;
+	margin-left: 0px;
+	margin-top: -20px;
+}
+
+footer .col-4-10 {
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 100%;
+}
+
+footer .col-1-4 {
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 100%;
+}
+
+footer h3, footer p {
+	margin-left: 90px;
 }
 
 .col-1-1 {
@@ -425,7 +523,7 @@ h2 {
 }
 
 .col-10-12 {
-	width: 83.3%;
+	width: 100%;
 
 }
 
