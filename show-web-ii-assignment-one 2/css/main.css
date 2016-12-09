@@ -32,6 +32,9 @@ html {
 	box-sizing: border-box;
 }
 
+a:hover {
+	color: white;
+}
 
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
@@ -55,12 +58,16 @@ li {
 
 /*------------2.1 - Site Structure (Site Header, Advertisement, Site Footer)--------------*/
 
-.float-left {
+.fl-left {
 	float: left;
 }
 
-.float-right {
+.fl-right {
 	float: right;
+}
+
+.red {
+	background-color: red;
 }
 
 
@@ -97,25 +104,14 @@ li {
 
 /*------------2.2 - Section Name----------------*/
 
-#grey {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-#grey-two {
-	padding-top: 200px;
-	padding-bottom: 200px;
-}
-
-#grey-three {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
 /*-----------2.3 - Columns----------------*/
 
 .col-1-1 {
 	width: 100%;
+}
+
+.col-10-12 {
+	width: 83.3%;
 }
 
 .col-1-2 {
@@ -164,8 +160,10 @@ li {
 
 /*------------2.4 - Boxes----------------*/
 
-.box-two {
+#box-two {
 	height: 200px;
+	padding-top: 70px;
+	padding-left: 75px;
 }
 
 .box-three {
@@ -190,6 +188,40 @@ li {
 	background-color: #D6DE23;
 }
 
+#box-nav  {
+	height: 50px;
+	margin-left: 100px;
+	margin-top: 35px;
+}
+
+nav a {
+	font-size: 25px;
+	padding-right: 15px;
+}
+
+.grey .col-1-3 {
+	margin-left: 500px;
+	margin-top: 12px;
+}
+
+#box-one .col-10-12 {
+	text-align: center;
+	margin: 0 auto;
+	margin-left: 88px;
+}
+
+#box-one .col-10-12 p:first-child {
+	font-size: 110px;
+	text-transform:uppercase;
+	font-weight:700;
+}
+
+#box-one {
+
+}
+
+
+
 /*--------------------------------------------------------------
 3.0 - Media
 -------------------------------------------------------------- */
@@ -200,7 +232,8 @@ img {
 
 #box-one {
 	background:url(../img/showtime.jpg) center no-repeat;
-	height: 836px;
+	padding-top: 100px;
+	height: 700px;
 }
 
 /*--------------------------------------------------------------
@@ -209,7 +242,7 @@ img {
 
 /*------------4.1 - Background Colors--------------*/
 
-#grey,  #grey-two, #grey-three {
+.grey {
 	background-color: #404041;
 }
 
@@ -220,7 +253,7 @@ img {
 
 /*------------4.2 - Text Colors----------------*/
 
-h1, h2, h4, #box-one h2, .box-three h3, a, #grey-three {
+h1, h2, h4, #box-one h2, .box-three h3, a, #grey-three, #box-one .col-10-12 p:first-child {
 	color: #D6DE23;
 }
 
@@ -238,7 +271,7 @@ h4 {
 	font-size: 27px;
 }
 
-.box-two  a{
+#box-two  a #box-two-a a{
 	font-size: 34px;
 }
 
@@ -249,6 +282,11 @@ h4 {
 h2 {
 	font-size: 133px;
 }
+
+h1 {
+	font-size: 50px;
+}
+
 
 /*------------4.4 - Alignments----------------*/
 
@@ -277,6 +315,10 @@ a {
 	padding-left: 155px;
 }
 
+h1 {
+	margin-left: 30px;
+
+}
 
 @media (max-width: 480px) {
 	
@@ -291,6 +333,10 @@ a {
 
 .box-six {
 	height: 200px;
+}
+
+.grey .col-1-3 {
+	margin-left: 0px;
 }
 
 h1 {
@@ -376,6 +422,11 @@ h2 {
 
 .col-1-12 {
 	width: 33.3%;
+}
+
+.col-10-12 {
+	width: 83.3%;
+
 }
 
 }
