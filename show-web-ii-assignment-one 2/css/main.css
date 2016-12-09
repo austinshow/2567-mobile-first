@@ -9,8 +9,10 @@
 	1.2 - Lists
 2.0 - Content
 	2.1 - Site Structure (Site Header, Advertisement, Site Footer)
-	2.2 - Section Name
-	2.3 - Section Name
+	2.2 - Header
+	2.3 - Columns
+	2.4 - Boxes
+	2.5 - Footer
 3.0 - Media
 4.0 - Utility
 	4.1 - Background Colors
@@ -22,7 +24,6 @@
 html {
 	font-family: 'Droid Sans', sans-serif;
 }
-
 
 *, *:after, *:before {
 	-web-box-sizing: border-box;
@@ -38,8 +39,54 @@ html {
 
 /*------------1.1 Headings--------------*/
 
-h1, h2, h4 {
+h1 {
+	margin-left: 30px;
+}
+
+#box-one h2 {
+	padding-top: 100px;
+}
+
+/*------------1.2 Body Cody--------------*/
+
+.col-1-2 p:first-child, #black-one p, #grey-two p, #box-one .col-10-12 p:last-child {
+	text-align: left;
+}
+
+.col-1-2 p, h2, #box-one h2, .box-three h3, #box-one .col-10-12 {
+	text-align: center;
+}
+
+h1, h2, h4, .box-three h3, a, #box-one h2 {
 	font-variant: small-caps;
+}
+
+footer h3, #box-one, .col-10-12 p:first-child  {
+	text-transform: uppercase;
+}
+
+.box-three p {
+	width: 50%;
+	margin-left: 160px;
+	margin-top: -20px;
+}
+
+#box-five p {
+	padding-left: 50px;
+}
+
+#box-one .col-10-12 p:first-child {
+	font-weight:700;
+	margin-bottom: -10px;
+}
+
+#box-one .col-10-12 p:last-child {
+	width: 70%;
+	margin-left: 100px;
+}
+
+#grey-two p:first-child {
+	margin-top: -20px;
 }
 
 /*------------1.5 Lists----------------*/
@@ -54,16 +101,12 @@ li {
 
 /*------------2.1 - Site Structure (Site Header, Advertisement, Site Footer)--------------*/
 
-.fl-left {
+.fl-left, [class*='col-'], [class*='col-']:last-of-type{
 	float: left;
 }
 
 .fl-right {
 	float: right;
-}
-
-.red {
-	background-color: red;
 }
 
 .wrapper {
@@ -83,13 +126,11 @@ li {
 }
 
 [class*='col-'] {
-	float: left;
 	padding-right: 20px;
 	margin-bottom: 20px;
 }
 
 [class*='col-']:last-of-type {
-	float: left;
 	padding-right: 0;
 }
 
@@ -97,7 +138,17 @@ li {
 	padding-left: 0;
 }
 
-/*------------2.2 - Section Name----------------*/
+/*------------2.2 - Header----------------*/
+
+#box-nav  {
+	height: 50px;
+	margin-left: 150px;
+	margin-top: 35px;
+}
+
+nav a {
+	padding-right: 15px;
+}
 
 /*-----------2.3 - Columns----------------*/
 
@@ -155,6 +206,11 @@ li {
 
 /*------------2.4 - Boxes----------------*/
 
+#box-one .col-10-12 {
+	margin: 0 auto;
+	margin-left: 88px;
+}
+
 #box-two {
 	height: 200px;
 	padding-top: 70px;
@@ -165,43 +221,9 @@ li {
 	height: 160px;
 }
 
-.box-three p {
-	width: 50%;
-	margin-left: 160px;
-	margin-top: -20px;
-}
-
-.box-three h3 {
-	font-variant: small-caps;
-}
-
-#box-five p {
-	padding-left: 50px;
-}
-
 .box-four {
 	height: 450px;
 	margin-top: 100px;
-}
-
-.box-six {
-	height: 258px;
-	background-color: #D6DE23;
-}
-
-#box-nav  {
-	height: 50px;
-	margin-left: 150px;
-	margin-top: 35px;
-}
-
-nav a {
-	font-size: 25px;
-	padding-right: 15px;
-}
-
-#grey-two p:first-child {
-	margin-top: -20px;
 }
 
 .grey .col-1-3 {
@@ -209,25 +231,7 @@ nav a {
 	margin-top: 12px;
 }
 
-#box-one .col-10-12 {
-	text-align: center;
-	margin: 0 auto;
-	margin-left: 88px;
-}
-
-#box-one .col-10-12 p:first-child {
-	font-size: 110px;
-	text-transform:uppercase;
-	font-weight:700;
-	margin-bottom: -10px;
-}
-
-#box-one .col-10-12 p:last-child {
-	width: 70%;
-	font-size: 27px;
-	text-align: left;
-	margin-left: 100px;
-}
+/*-----------2.5 - Footer----------------*/
 
 footer .col-1-4 {
 	margin-left: 700px;
@@ -235,22 +239,17 @@ footer .col-1-4 {
 }
 
 footer h3 {
-	text-transform: uppercase;
 	font-weight: 700;
 	margin-bottom: -12px;
-}
-
-footer h3, footer a {
-	font-size: 25px;
-}
-
-footer a {
-	padding-right: 20px;
 }
 
 footer .col-4-10 {
 	margin-top: 10px;
 	margin-left: 30px;
+}
+
+footer a {
+	padding-right: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -277,13 +276,18 @@ img {
 	background-color: #404041;
 }
 
+#grey-two {
+	background-color: #7C7A7A;
+	padding-bottom: 100px;
+}
+
 #black-one {
 	background-color: #231F20;
 }
 
-#grey-two {
-	background-color: #7C7A7A;
-	padding-bottom: 100px;
+.box-six {
+	background-color: #D6DE23;
+	height: 258px;
 }
 
 /*------------4.2 - Text Colors----------------*/
@@ -293,7 +297,7 @@ h1, h2, h4, #box-one h2, .box-three h3, a, #grey-three, #box-one .col-10-12 p:fi
 }
 
 .box-three p, #black-one p, .col-1-2 p:first-child, #box-one .col-10-12 p:last-child, a:hover, .grey:nth-child(4) p, #grey-two p {
-	color: white
+	color: white;
 }
 
 .col-1-2 p {
@@ -302,8 +306,13 @@ h1, h2, h4, #box-one h2, .box-three h3, a, #grey-three, #box-one .col-10-12 p:fi
 
 /*------------4.3 - Text Sizes----------------*/
 
-h4 {
-	font-size: 27px;
+a {
+	font-size: 14px;
+	text-decoration:none;
+}
+
+nav a, footer h3, footer a, h4, #box-one .col-10-12 p:last-child {
+	font-size: 25px;
 }
 
 #box-two  a #box-two-a a{
@@ -318,35 +327,19 @@ h1 {
 	font-size: 50px;
 }
 
+#box-one .col-10-12 p:first-child {
+	font-size: 110px;
+}
+
 h2 {
 	font-size: 133px;
 }
 
 /*------------4.4 - Alignments----------------*/
 
-.col-1-2 p:first-child, #black-one p, #grey-two p {
-	text-align: left;
-}
-
-.col-1-2 p, h2, #box-one h2, .box-three h3 {
-	text-align: center;
-}
-
-#box-one h2 {
-	padding-top: 100px;
-	font-size: 133px;
-	font-variant: small-caps;
-}
-
 .grey:nth-child(4) {
 	padding-top: 100px;
 	padding-bottom: 100px;
-}
-
-a {
-	font-size: 14px;
-	font-variant: small-caps;
-	text-decoration:none;
 }
 
 .box-two  a {
@@ -354,16 +347,12 @@ a {
 	padding-left: 155px;
 }
 
-h1 {
-	margin-left: 30px;
-
-}
 
 @media (max-width: 480px) {
 	
 	
 .wrapper {
-    	width: 85%;
+    width: 85%;
 }
 	
 #box-one {
@@ -458,21 +447,16 @@ nav a {
 	margin-top: -20px;
 }
 
-footer .col-4-10 {
+footer .col-4-10, footer .col-1-4 {
 	margin-top: 0px;
 	margin-left: 0px;
-	width: 100%;
-}
-
-footer .col-1-4 {
-	margin-left: 0px;
-	margin-top: 0px;
 	width: 100%;
 }
 
 footer h3, footer p {
 	margin-left: 90px;
 }
+
 
 .col-1-1 {
 	width: 100%;
@@ -501,30 +485,9 @@ footer h3, footer p {
 .col-1-7 {
 	width: 50%;
 }
-	
-.col-1-8 {
-	width: 25%;
-}
-	
-.col-1-9 {
-	width: 33.3%;
-}
-	
-.col-1-10 {
-	width: 50%;
-}
-	
-.col-1-11 {
-	width: 100%;
-}
-
-.col-1-12 {
-	width: 33.3%;
-}
 
 .col-10-12 {
 	width: 100%;
-
 }
 
 }
