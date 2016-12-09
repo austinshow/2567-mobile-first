@@ -23,6 +23,7 @@
 
 html {
 	font-family: 'Droid Sans', sans-serif;
+	font-size: 16px;
 }
 
 *, *:after, *:before {
@@ -307,32 +308,32 @@ h1, h2, h4, #box-one h2, .box-three h3, a, #grey-three, #box-one .col-10-12 p:fi
 /*------------4.3 - Text Sizes----------------*/
 
 a {
-	font-size: 14px;
+	font-size: 0.875rem;
 	text-decoration:none;
 }
 
 nav a, footer h3, footer a, h4, #box-one .col-10-12 p:last-child {
-	font-size: 25px;
+	font-size: 1.563rem;
 }
 
 #box-two  a #box-two-a a{
-	font-size: 34px;
+	font-size: 2.125rem;
 }
 
 .box-three h3 {
-	font-size: 46px;
+	font-size: 2.875rem;
 }
 
 h1 {
-	font-size: 50px;
+	font-size: 3.125rem;
 }
 
 #box-one .col-10-12 p:first-child {
-	font-size: 110px;
+	font-size:  6.875rem;
 }
 
 h2 {
-	font-size: 133px;
+	font-size: 8.313rem;
 }
 
 /*------------4.4 - Alignments----------------*/
@@ -350,69 +351,133 @@ h2 {
 
 @media (max-width: 480px) {
 	
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Lists
+2.0 - Content
+	2.1 - Columns
+	2.2 - Boxes
+3.0 - Media
+4.0 - Utility
+	4.1 - Text Colors
+	4.2 - Text Sizes
+	4.3 - Alignments
+--------------------------------------------------------------*/
 	
+/*1.0 - Typography*/
+
+	/*1.1 - Headings*/
+
+h1 {
+	font-variant: small-caps;
+	font-size: 2.5rem;
+	padding-left: 0px;
+	margin-bottom: -40px;
+}
+	
+	/*1.2 - Body Copy*/
+	
+#box-one h2 {
+	font-variant: small-caps;
+}
+
+ul, h1, #box-one h2, #box-one .col-10-12 {
+	text-align: center;
+}
+
+.box-three h3, .box-three p, h2{
+	text-align: left;
+}
+
+	
+/*2.0 - Content*/
+	
+	/*2.1 - Columns*/
+
+.col-1-1, .col-1-2, .col-1-3, .col-1-5, .col-10-12, footer .col-4-10, footer .col-1-4, .grey .col-1-4, #box-one .col-10-12 p:last-child, .box-three p    {
+	width: 100%;
+}
+
 .wrapper {
     width: 85%;
 }
-	
-#box-one {
-	background-image:url(../img/showtime.jpg);
+
+.col-1-4, .col-1-7   {
+	width: 50%;
 }
+	
+.col-1-6 {
+	width: 33.3%;
+}
+	
+	/*2.2 - Boxes*/
 
 .box-six {
 	height: 200px;
 }
+	
+	
+/*3.0 - Media*/
 
-.grey .col-1-3 {
-	margin-left: 0px;
+#box-one {
+	background-image:url(../img/showtime.jpg);
+	height: 400px; 
 }
 
-.grey .col-1-4  {
-	width: 100%;
+/*4.0 - Utility*/
+	
+	/*4.1 - Text Colors*/
+	
+#grey-three, #box-one h2 {
+	color: #D6DE23;
 }
+	/*4.2 - Text Sizes*/
 
-h1 {
-	font-variant: small-caps;
-	font-size: 40px;
-	padding-left: 0px;
-	text-align: center;
-	margin-bottom: -40px;
-}
-
-ul {
-	text-align: center;
-	padding-right: 30px;
+#box-one .col-10-12 p:last-child {
+	font-size: 1rem;
 }
 	
-h2 {
-	font-size: 47px;
-	text-align: left;
-}
-
-#box-nav  {
-	margin-left: 0px;
-	margin-top: 35px;
-}
-
 nav a {
-	font-size: 25px;
+	font-size: 1.563rem;
 	padding-right: 15px;
 }
 
-.grey .col-1-3 {
-	margin-left: 0px;
+#box-one .col-10-12 p:first-child {
+	font-size: 2.188rem;
+	font-weight: 800;
+}
+
+h2 {
+	font-size:  2.938rem;
+}
+
+	/*4.3 - Alignments*/
+
+ul {
+	padding-right: 30px;
+}
+
+.box-three p {
+	margin-top: -20px;
+}
+
+footer .col-4-10, footer .col-1-4, .grey .col-1-3 {
 	margin-top: 0px;
 }
 
-.box-three h3, .box-three p {
-	text-align: left;
+#box-nav  {
+	margin-top: 35px;
 }
 
-#box-one h2 {
-	text-align: center;
-	font-size: 47px;
-	color: #D6DE23;
-	font-variant: small-caps;
+footer h3, footer p  {
+	margin-left: 90px;
+}
+
+footer .col-4-10, footer .col-1-4, #box-one .col-10-12, .box-three p, #box-one .col-10-12 p:last-child, .grey .col-1-3, #box-nav  {
+	margin-left: 0px;
 }
 
 #grey-two, #black-one {
@@ -420,75 +485,10 @@ nav a {
 	padding-bottom: 50px;
 }
 
-#grey-three {
-	color: #D6DE23;
-}
-
 #box-one .col-10-12 {
-	margin-left: 0px;
 	margin: 0 auto;
-	text-align: center;
 }
 
-#box-one .col-10-12 p:first-child {
-	font-size: 35px;
-	font-weight:800;
-}
-
-#box-one .col-10-12 p:last-child {
-	width: 100%;
-	font-size: 16px;
-	margin-left: 0px;
-}
-
-.box-three p {
-	width: 100%;
-	margin-left: 0px;
-	margin-top: -20px;
-}
-
-footer .col-4-10, footer .col-1-4 {
-	margin-top: 0px;
-	margin-left: 0px;
-	width: 100%;
-}
-
-footer h3, footer p {
-	margin-left: 90px;
-}
-
-
-.col-1-1 {
-	width: 100%;
-}
-
-.col-1-2 {
-	width: 100%;
-}
-	
-.col-1-3 {
-	width: 100%;
-}
-	
-.col-1-4 {
-	width: 50%;
-}
-	
-.col-1-5 {
-	width: 100%;
-}
-	
-.col-1-6 {
-	width: 33.3%;
-}
-	
-.col-1-7 {
-	width: 50%;
-}
-
-.col-10-12 {
-	width: 100%;
-}
 
 }
 
